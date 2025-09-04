@@ -19,24 +19,68 @@
 body {
     background-color: var(--timber-wolf);
     height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
     background-color: var(--eerie-black);
-    height: 4rem;
+    height: 6rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    padding: 0 1.5rem;
 }
 
-nav>button {
-    flex: 0 1 4rem;
-    height: 100%;
-    font-size: large;
+.branding {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--floral-white);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-underline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    color: var(--floral-white);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.3rem;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.btn-underline:hover {
+    color: var(--timber-wolf);
+    transform: scale(1.1);
+}
+
+.btn-underline:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+#content {
+    flex: 1;
 }
 
 #content>div {
