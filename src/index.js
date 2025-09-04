@@ -8,17 +8,18 @@ export const contentDiv = document.getElementById("content");
 
 const navElement = document.querySelector("nav");
 navElement.addEventListener("click", (e) => {
-    let btnId = e.target.id;
+    let btnId = e.target.dataset.buttonName;
+    if(!btnId) return;
     contentDiv.textContent = "";
 
     switch (btnId) {
-        case "home-btn":
+        case "home":
             displayHomePage();
             break;
-        case "menu-btn":
+        case "menu":
             displayMenu();
             break;
-        case "about-btn":
+        case "about":
             displayAboutUs();
             break;
         default:

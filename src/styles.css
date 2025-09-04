@@ -1,9 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --floral-white: #fffcf2ff;
+    --timber-wolf: #ccc5b9ff;
+    --black-olive: #403d39ff;
+    --eerie-black: #252422ff;
+
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
 body {
-    background-color: rebeccapurple;
+    background-color: var(--timber-wolf);
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+nav {
+    background-color: var(--eerie-black);
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+nav>button {
+    flex: 0 1 4rem;
+    height: 100%;
+    font-size: large;
+}
+
+#content>div {
+    height: 100%;
+    padding: 1rem;
 }
 
 .home {
-    background-color: lightgreen;
+    background-color: lightslategray;
 }
 
 .menu {
