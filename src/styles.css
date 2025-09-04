@@ -1,3 +1,15 @@
 body {
     background-color: rebeccapurple;
 }
+
+.home {
+    background-color: lightgreen;
+}
+
+.menu {
+    background-color: lightblue;
+}
+
+.about {
+    background-color: lightcoral;
+}
