@@ -7,8 +7,7 @@ import { displayAboutUs } from "./about";
 const htmlBody = document.querySelector("body");
 export const contentDiv = document.getElementById("content");
 
-const navElement = document.querySelector("nav");
-navElement.addEventListener("click", (e) => {
+htmlBody.addEventListener("click", (e) => {
     let btnId = e.target.dataset.buttonName;
     if (!btnId) return;
     contentDiv.textContent = "";

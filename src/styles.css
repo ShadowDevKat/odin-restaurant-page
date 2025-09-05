@@ -24,24 +24,7 @@ body {
     flex-direction: column;
 }
 
-nav {
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-}
-
-.branding {
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 1rem;
-}
+/* General Styles */
 
 .btn-underline {
     font-size: 1.2rem;
@@ -78,29 +61,6 @@ nav {
     opacity: 1;
 }
 
-#content {
-    flex: 1;
-}
-
-#content>div {
-    height: 100%;
-    padding: 1rem;
-}
-
-.home {
-    background-color: transparent;
-}
-
-.menu {
-    background-color: transparent;
-}
-
-.about {
-    background-color: transparent;
-}
-
-/* General Styles */
-
 .glass-effect {
     background: var(--eerie-black-translucent);
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 1);
@@ -127,4 +87,68 @@ nav {
 
 .menu-bg {
     background-image: url("./images/menu-bg.jpg");
+}
+
+/* Content Styles */
+
+nav {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.branding {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+#content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.home {
+    flex: 0 1 50%;
+    height: 50%;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.home-text {
+    margin-top: auto;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.home-btn {
+    margin-top: auto;
+    align-self: flex-start;
+    border: 1px solid var(--floral-white);
+}
+
+.menu {
+    background-color: transparent;
+}
+
+.about {
+    background-color: transparent;
 }
