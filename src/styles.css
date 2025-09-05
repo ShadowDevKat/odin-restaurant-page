@@ -11,9 +11,10 @@
     --timber-wolf: #ccc5b9ff;
     --black-olive: #403d39ff;
     --eerie-black: #252422ff;
+    --eerie-black-translucent: rgba(37, 36, 34, 0.3);
 
     font-family: Roboto, sans-serif;
-    color: white;
+    color: var(--floral-white);
 }
 
 body {
@@ -24,8 +25,7 @@ body {
 }
 
 nav {
-    background-color: var(--eerie-black);
-    height: 6rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,6 @@ nav {
     font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
-    color: var(--floral-white);
 }
 
 .nav-buttons {
@@ -89,13 +88,43 @@ nav {
 }
 
 .home {
-    background-color: lightslategray;
+    background-color: transparent;
 }
 
 .menu {
-    background-color: lightblue;
+    background-color: transparent;
 }
 
 .about {
-    background-color: lightcoral;
+    background-color: transparent;
+}
+
+/* General Styles */
+
+.glass-effect {
+    background: var(--eerie-black-translucent);
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(37, 36, 34, 0.3);
+}
+
+.home-bg,
+.about-bg,
+.menu-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-bg {
+    background-image: url("./images/home-bg.jpg");
+}
+
+.about-bg {
+    background-image: url("./images/about-bg.jpg");
+}
+
+.menu-bg {
+    background-image: url("./images/menu-bg.jpg");
 }

@@ -1,6 +1,7 @@
-import { contentDiv } from ".";
+import { setBackgroundClass, contentDiv } from ".";
+
 export function displayAboutUs() {
-    // const contentDiv = document.getElementById("content");
+    setBackgroundClass("about-bg");
 
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("about");

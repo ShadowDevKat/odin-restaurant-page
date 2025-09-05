@@ -1,6 +1,7 @@
-import { contentDiv } from ".";
+import { setBackgroundClass, contentDiv } from ".";
+
 export function displayHomePage() {
-    // const contentDiv = document.getElementById("content");
+    setBackgroundClass("home-bg");
 
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("home");

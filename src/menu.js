@@ -1,6 +1,7 @@
-import { contentDiv } from ".";
+import { setBackgroundClass, contentDiv } from ".";
+
 export function displayMenu() {
-    // const contentDiv = document.getElementById("content");
+    setBackgroundClass("menu-bg");
 
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("menu");
